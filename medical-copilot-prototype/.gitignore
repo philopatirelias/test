@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+
+# Env
+.env
+.env.local
+
+# Local storage artifacts
+storage/audio/**
+storage/transcripts/**
+storage/worker_tasks/**
+storage/worker_outputs/**
+!storage/**/.gitkeep
+
+# DB
+storage/*.db

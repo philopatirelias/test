@@ -1,0 +1,8 @@
+Doctor: What brings you in today?
+Patient: I have chest discomfort after meals.
+Doctor: How long has this been happening?
+Patient: About two weeks.
+Doctor: Does it happen with exercise?
+Patient: I am not sure, I mostly notice it after eating.
+Doctor: Any shortness of breath or fainting?
+Patient: No fainting, but I have not thought much about shortness of breath.
