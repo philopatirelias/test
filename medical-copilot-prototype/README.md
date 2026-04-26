@@ -66,3 +66,32 @@ pytest -q
 
 ## Next step
 Replace fallback analyzer with a controlled LLM call behind strict output validation and safety filters while preserving last-valid-state behavior.
+
+
+## Codex CLI Worker Mode (Prototype Only)
+
+Install Codex CLI:
+```bash
+npm i -g @openai/codex
+```
+
+Login:
+```bash
+codex
+```
+
+Run backend:
+```bash
+cd backend
+source .venv/bin/activate
+python -m uvicorn main:app --reload --port 8000
+```
+
+Run Codex worker:
+```bash
+cd backend
+source .venv/bin/activate
+WORKER_MODE=codex_cli python -m worker.run_codex_worker
+```
+
+Important: this mode uses Codex CLI locally and is not production architecture.
