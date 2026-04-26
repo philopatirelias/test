@@ -16,7 +16,7 @@ from schemas import (
     DifferentialOut,
     SuggestionOut,
 )
-from settings import STORAGE_DIR
+from settings import STORAGE_DIR, settings
 from audio.convert import convert_to_wav
 from stt.whisper_client import WhisperClient
 from worker.create_task import create_analysis_task
@@ -96,7 +96,8 @@ def add_demo_transcript(session_id: str, req: DemoTranscriptRequest):
     _insert_chunk(session_id, req.text, None, None)
     transcript = fetch_transcript(session_id)
     job_id = create_analysis_task(session_id, sess["consult_type"], transcript)
-    run_once()
+    if settings.worker_mode == "fallback":
+        run_once()
     return {"status": "accepted", "job_id": job_id}
 
 
@@ -132,7 +133,8 @@ async def upload_audio_chunk(session_id: str, file: UploadFile = File(...), idem
     idx = _insert_chunk(session_id, transcript_text, str(wav_path), idempotency_key or None)
     full_transcript = fetch_transcript(session_id)
     job_id = create_analysis_task(session_id, sess["consult_type"], full_transcript)
-    run_once()
+    if settings.worker_mode == "fallback":
+        run_once()
 
     total_ms = int((time.time() - start) * 1000)
     log_event("audio_upload", f"/sessions/{session_id}/audio", session_id, total_ms)

@@ -7,6 +7,8 @@ class Settings(BaseSettings):
     sqlite_path: str = "./storage/copilot.db"
     whisper_mode: str = "mock"
     worker_mode: str = "fallback"
+    codex_command: str = "codex"
+    codex_timeout_seconds: int = 120
 
     whisper_local_model: str = "tiny"
     whisper_device: str = "cpu"
