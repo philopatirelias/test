@@ -1,0 +1,6 @@
+Doctor: What are you noticing?
+Patient: My heart sometimes races at night.
+Doctor: Do you drink coffee or energy drinks?
+Patient: I drink three coffees and sometimes energy drinks.
+Doctor: Have you fainted?
+Patient: No.

@@ -1,0 +1,6 @@
+Doctor: Tell me about the headache.
+Patient: It started yesterday and is very painful.
+Doctor: Any weakness, trouble speaking, or vision loss?
+Patient: No weakness or speech trouble.
+Doctor: Did it start suddenly like a thunderclap?
+Patient: I do not know, it got bad quickly.

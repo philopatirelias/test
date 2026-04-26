@@ -1,0 +1,6 @@
+Doctor: What is the main issue?
+Patient: I have abdominal pain after eating.
+Doctor: Any vomiting blood or black stools?
+Patient: No.
+Doctor: Any weight loss?
+Patient: I lost a little weight but I am not sure how much.
